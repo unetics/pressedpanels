@@ -9,6 +9,8 @@ Author URI: http://unetics.org
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl.html
 Donate link: http://siteorigin.com/page-builder/#donate
+GitHub Plugin URI: https://github.com/unetics/pressedpanels
+GitHub Branch:     master
 */
 
 define('SITEORIGIN_PANELS_VERSION', '2.0.2');
@@ -805,7 +807,7 @@ function siteorigin_panels_render( $post_id = false, $enqueue_css = true, $panel
 	ob_start();
 
 	// Add the panel layout wrapper
-	echo '<div id="pl-' . $post_id . '">';
+	echo '<div id="panelWrap pl-' . $post_id . '">';
 
 	global $siteorigin_panels_inline_css;
 	if( empty($siteorigin_panels_inline_css) ) $siteorigin_panels_inline_css = '';
@@ -832,6 +834,7 @@ function siteorigin_panels_render( $post_id = false, $enqueue_css = true, $panel
 		foreach ( $grid_attributes as $name => $value ) {
 			echo $name.'="'.esc_attr($value).'" ';
 		}
+		
 		echo '>';
 
 		$style_attributes = array();
@@ -846,6 +849,7 @@ function siteorigin_panels_render( $post_id = false, $enqueue_css = true, $panel
 		foreach ( $cells as $ci => $widgets ) {
 			// Themes can add their own styles to cells
 			$cell_classes = apply_filters( 'siteorigin_panels_row_cell_classes', array('panel-grid-cell'), $panels_data );
+			if ( empty( $widgets ) ) $cell_classes[] = 'empty';
 			$cell_attributes = apply_filters( 'siteorigin_panels_row_cell_attributes', array(
 				'class' => implode( ' ', $cell_classes ),
 				'id' => 'pgc-' . $post_id . '-' . $gi  . '-' . $ci

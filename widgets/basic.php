@@ -63,9 +63,6 @@ class SiteOrigin_Panels_Widgets_Layout extends WP_Widget {
 
 }
 
-
-
-
 /**
  * Widget for displaying content from a post
  *
@@ -438,6 +435,5 @@ function siteorigin_panels_basic_widgets_init(){
 	register_widget('SiteOrigin_Panels_Widgets_PostContent');
 	register_widget('SiteOrigin_Panels_Widgets_PostLoop');
 	register_widget('SiteOrigin_Panels_Widgets_Layout');
-	register_widget('SiteOrigin_Panels_Widget_tile');
 }
 add_action('widgets_init', 'siteorigin_panels_basic_widgets_init');

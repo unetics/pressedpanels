@@ -21,7 +21,7 @@ function siteorigin_panels_dump(){
 	echo ");";
 	
 */
-	echo "<!--\n";
+	echo "<textarea>";
 	echo "<?php \n";
 	echo '$layouts[] = ';
 	global $post;
@@ -29,6 +29,6 @@ function siteorigin_panels_dump(){
 	$pdata['name'] = 'Layout';
 	$pdata['description'] = 'Layout description';
 	var_export($pdata);
-	echo "; \n\n-->";
+	echo ";</textarea>";
 }
 add_action('siteorigin_panels_metabox_end', 'siteorigin_panels_dump');

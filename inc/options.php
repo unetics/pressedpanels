@@ -66,7 +66,7 @@ function siteorigin_panels_setting($key = ''){
  * Add the options page
  */
 function siteorigin_panels_options_admin_menu() {
-	add_options_page( __('SiteOrigin Page Builder', 'siteorigin-panels'), __('SiteOrigin Page Builder', 'siteorigin-panels'), 'manage_options', 'siteorigin_panels', 'siteorigin_panels_options_page' );
+	add_options_page('Page Builder', 'Page Builder', 'manage_options', 'siteorigin_panels', 'siteorigin_panels_options_page' );
 }
 add_action( 'admin_menu', 'siteorigin_panels_options_admin_menu' );
 
@@ -105,7 +105,7 @@ function siteorigin_panels_options_field_post_types( $panels_post_types ){
 		<?php
 	}
 
-	?><p class="description"><?php _e('Post types that will have the page builder available', 'siteorigin-panels') ?></p><?php
+	?><p class="description">Post types that will have the page builder available</p><?php
 }
 
 function siteorigin_panels_options_field( $id, $value, $title, $description = false ){

@@ -4,8 +4,8 @@ function siteorigin_panels_plugin_activation_page(){
 	if( !isset( $_GET[  'siteorigin-pa-install' ] ) ) return;
 
 	add_plugins_page(
-		__('Install Page Builder Plugin', 'siteorigin-panels'),
-		__('Install Page Builder Plugin', 'siteorigin-panels'),
+		'Install Page Builder Plugin',
+		'Install Page Builder Plugin',
 		'install_plugins',
 		'siteorigin_panels_plugin_activation',
 		'siteorigin_panels_plugin_activation_render_page'

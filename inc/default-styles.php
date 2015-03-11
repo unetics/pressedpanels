@@ -38,63 +38,63 @@ class SiteOrigin_Panels_Default_Styling {
 		// Add the attribute fields
 
 		$fields['class'] = array(
-			'name' => __('Row Class', 'siteorigin-panels'),
+			'name' => 'Row Class',
 			'type' => 'text',
 			'group' => 'attributes',
-			'description' => __('A CSS class', 'siteorigin-panels'),
+			'description' => 'A CSS class',
 			'priority' => 5,
 		);
 
 		$fields['cell_class'] = array(
-			'name' => __('Cell Class', 'siteorigin-panels'),
+			'name' => 'Cell Class',
 			'type' => 'text',
 			'group' => 'attributes',
-			'description' => __('Class added to all cells in this row.', 'siteorigin-panels'),
+			'description' => 'Class added to all cells in this row.',
 			'priority' => 6,
 		);
 
 		$fields['row_css'] = array(
-			'name' => __('CSS Styles', 'siteorigin-panels'),
+			'name' => 'CSS Styles',
 			'type' => 'code',
 			'group' => 'attributes',
-			'description' => __('CSS Styles, given as one per row.', 'siteorigin-panels'),
+			'description' => 'CSS Styles, given as one per row.',
 			'priority' => 10,
 		);
 
 		// Add the layout fields
 
 		$fields['bottom_margin'] = array(
-			'name' => __('Bottom Margin', 'siteorigin-panels'),
+			'name' => 'Bottom Margin',
 			'type' => 'measurement',
 			'group' => 'layout',
-			'description' => __('Space below the row.', 'siteorigin-panels'),
+			'description' => 'Space below the row.',
 			'priority' => 5,
 		);
 
 		$fields['gutter'] = array(
-			'name' => __('Gutter', 'siteorigin-panels'),
+			'name' => 'Gutter',
 			'type' => 'measurement',
 			'group' => 'layout',
-			'description' => __('Amount of space between columns.', 'siteorigin-panels'),
+			'description' => 'Amount of space between columns.',
 			'priority' => 6,
 		);
 
 		$fields['padding'] = array(
-			'name' => __('Padding', 'siteorigin-panels'),
+			'name' => 'Padding',
 			'type' => 'measurement',
 			'group' => 'layout',
-			'description' => __('Padding around the entire row.', 'siteorigin-panels'),
+			'description' => 'Padding around the entire row.',
 			'priority' => 7,
 		);
 
 		$fields['row_stretch'] = array(
-			'name' => __('Row Layout', 'siteorigin-panels'),
+			'name' => 'Row Layout',
 			'type' => 'select',
 			'group' => 'layout',
 			'options' => array(
-				'standard' => __('Standard', 'siteorigin-panels'),
-				'full' => __('Full Width', 'siteorigin-panels'),
-				'full-stretched' => __('Full Width Stretched', 'siteorigin-panels'),
+				'standard' => 'Standard',
+				'full' => 'Full Width',
+				'full-stretched' => 'Full Width Stretched',
 			),
 			'priority' => 10,
 		);
@@ -102,39 +102,39 @@ class SiteOrigin_Panels_Default_Styling {
 		// How lets add the design fields
 
 		$fields['background'] = array(
-			'name' => __('Background Color', 'siteorigin-panels'),
+			'name' => 'Background Color',
 			'type' => 'color',
 			'group' => 'design',
-			'description' => __('Background color of the row.', 'siteorigin-panels'),
+			'description' => 'Background color of the row.',
 			'priority' => 5,
 		);
 
 		$fields['background_image_attachment'] = array(
-			'name' => __('Background Image', 'siteorigin-panels'),
+			'name' => 'Background Image',
 			'type' => 'image',
 			'group' => 'design',
-			'description' => __('Background image of the row.', 'siteorigin-panels'),
+			'description' => 'Background image of the row.',
 			'priority' => 6,
 		);
 
 		$fields['background_display'] = array(
-			'name' => __('Background Image Display', 'siteorigin-panels'),
+			'name' => 'Background Image Display',
 			'type' => 'select',
 			'group' => 'design',
 			'options' => array(
-				'tile' => __('Tiled Image', 'siteorigin-panels'),
-				'cover' => __('Cover', 'siteorigin-panels'),
-				'center' => __('Centered, with original size', 'siteorigin-panels'),
+				'tile' => 'Tiled Image',
+				'cover' => 'Cover',
+				'center' => 'Centered, with original size',
 			),
-			'description' => __('How the background image is displayed.', 'siteorigin-panels'),
+			'description' => 'How the background image is displayed.',
 			'priority' => 7,
 		);
 
 		$fields['border_color'] = array(
-			'name' => __('Border Color', 'siteorigin-panels'),
+			'name' => 'Border Color',
 			'type' => 'color',
 			'group' => 'design',
-			'description' => __('Border color of the row.', 'siteorigin-panels'),
+			'description' => 'Border color of the row.',
 			'priority' => 10,
 		);
 
@@ -143,73 +143,73 @@ class SiteOrigin_Panels_Default_Styling {
 
 	static function widget_style_fields($fields) {
 		$fields['class'] = array(
-			'name' => __('Widget Class', 'siteorigin-panels'),
+			'name' => 'Widget Class',
 			'type' => 'text',
 			'group' => 'attributes',
-			'description' => __('A CSS class', 'siteorigin-panels'),
+			'description' => 'A CSS class',
 			'priority' => 5,
 		);
 
 		$fields['widget_css'] = array(
-			'name' => __('CSS Styles', 'siteorigin-panels'),
+			'name' => 'CSS Styles',
 			'type' => 'code',
 			'group' => 'attributes',
-			'description' => __('CSS Styles, given as one per row.', 'siteorigin-panels'),
+			'description' => 'CSS Styles, given as one per row.',
 			'priority' => 10,
 		);
 
 		$fields['padding'] = array(
-			'name' => __('Padding', 'siteorigin-panels'),
+			'name' => 'Padding',
 			'type' => 'measurement',
 			'group' => 'layout',
-			'description' => __('Padding around the entire widget.', 'siteorigin-panels'),
+			'description' => 'Padding around the entire widget.',
 			'priority' => 7,
 		);
 
 		// How lets add the design fields
 
 		$fields['background'] = array(
-			'name' => __('Background Color', 'siteorigin-panels'),
+			'name' => 'Background Color',
 			'type' => 'color',
 			'group' => 'design',
-			'description' => __('Background color of the widget.', 'siteorigin-panels'),
+			'description' => 'Background color of the widget.',
 			'priority' => 5,
 		);
 
 		$fields['background_image_attachment'] = array(
-			'name' => __('Background Image', 'siteorigin-panels'),
+			'name' => 'Background Image',
 			'type' => 'image',
 			'group' => 'design',
-			'description' => __('Background image of the widget.', 'siteorigin-panels'),
+			'description' => 'Background image of the widget.',
 			'priority' => 6,
 		);
 
 		$fields['background_display'] = array(
-			'name' => __('Background Image Display', 'siteorigin-panels'),
+			'name' => 'Background Image Display',
 			'type' => 'select',
 			'group' => 'design',
 			'options' => array(
-				'tile' => __('Tiled Image', 'siteorigin-panels'),
-				'cover' => __('Cover', 'siteorigin-panels'),
-				'center' => __('Centered, with original size', 'siteorigin-panels'),
+				'tile' => 'Tiled Image',
+				'cover' => 'Cover',
+				'center' => 'Centered, with original size',
 			),
-			'description' => __('How the background image is displayed.', 'siteorigin-panels'),
+			'description' => 'How the background image is displayed.',
 			'priority' => 7,
 		);
 
 		$fields['border_color'] = array(
-			'name' => __('Border Color', 'siteorigin-panels'),
+			'name' => 'Border Color',
 			'type' => 'color',
 			'group' => 'design',
-			'description' => __('Border color of the widget.', 'siteorigin-panels'),
+			'description' =>'Border color of the widget.',
 			'priority' => 10,
 		);
 
 		$fields['font_color'] = array(
-			'name' => __('Font Color', 'siteorigin-panels'),
+			'name' => 'Font Color',
 			'type' => 'color',
 			'group' => 'design',
-			'description' => __('Color of text inside this widget.', 'siteorigin-panels'),
+			'description' => 'Color of text inside this widget.',
 			'priority' => 15,
 		);
 

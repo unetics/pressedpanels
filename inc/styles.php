@@ -12,11 +12,11 @@ function siteorigin_panels_ajax_action_style_form(){
 
 	switch($type) {
 		case 'row':
-			siteorigin_panels_render_styles_fields('row', '<h3>' . __('Row Styles', 'siteorigin-panels') . '</h3>', '', $current);
+			siteorigin_panels_render_styles_fields('row', '<h3> Row Styles </h3>', '', $current);
 			break;
 
 		case 'widget':
-			siteorigin_panels_render_styles_fields('widget', '<h3>' . __('Widget Styles', 'siteorigin-panels') . '</h3>', '', $current);
+			siteorigin_panels_render_styles_fields('widget', '<h3> Widget Styles </h3>', '', $current);
 	}
 
 	exit();
@@ -37,15 +37,15 @@ function siteorigin_panels_render_styles_fields( $section, $before = '', $after 
 
 	$groups = array(
 		'attributes' => array(
-			'name' => __('Attributes', 'siteorigin-panels'),
+			'name' => 'Attributes',
 			'priority' => 5
 		),
 		'layout' => array(
-			'name' => __('Layout', 'siteorigin-panels'),
+			'name' => 'Layout',
 			'priority' => 10
 		),
 		'design' => array(
-			'name' => __('Design', 'siteorigin-panels'),
+			'name' => 'Design',
 			'priority' => 15
 		),
 	);
@@ -55,7 +55,7 @@ function siteorigin_panels_render_styles_fields( $section, $before = '', $after 
 		if( empty($field['group']) || $field['group'] == 'theme' ) {
 			if( empty($groups['theme']) ) {
 				$groups['theme'] = array(
-					'name' => __('Theme', 'siteorigin-panels'),
+					'name' => 'Theme',
 					'priority' => 10
 				);
 			}
@@ -158,11 +158,11 @@ function siteorigin_panels_render_style_field( $field, $current, $field_id ){
 				</div>
 
 				<div class="select-image">
-					<?php _e('Select Image') ?>
+					Select Image
 				</div>
 				<input type="hidden" name="<?php echo esc_attr($field_name) ?>" value="<?php echo intval($current) ?>" />
 			</div>
-			<a href="#" class="remove-image"><?php _e('Remove') ?></a>
+			<a href="#" class="remove-image">Remove</a>
 			<?php
 			break;
 
@@ -176,7 +176,7 @@ function siteorigin_panels_render_style_field( $field, $current, $field_id ){
 			?>
 			<label class="so-checkbox-label">
 				<input type="checkbox" name="<?php echo esc_attr($field_name) ?>" <?php checked($current) ?> />
-				<?php echo esc_html( isset($field['label']) ? $field['label'] : __('Enabled', 'siteorigin-panels') ) ?>
+				<?php echo esc_html( isset($field['label']) ? $field['label'] : 'Enabled' ) ?>
 			</label>
 			<?php
 			break;

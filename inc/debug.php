@@ -21,7 +21,7 @@ function siteorigin_panels_dump(){
 	echo ");";
 	
 */
-	echo "<textarea>";
+	echo "<textarea class='hidden'>";
 	echo "<?php \n";
 	echo '$layouts[] = ';
 	global $post;

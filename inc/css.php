@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Class SiteOrigin_Panels_Css_Builder
  *

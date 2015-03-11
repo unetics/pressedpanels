@@ -56,8 +56,7 @@ function siteorigin_panels_ajax_prebuilt_layouts(){
 		foreach($layouts as $id => $vals) {
 			$return[$id] = array(
 				'name' => $vals['name'],
-				'description' => isset($vals['description']) ? $vals['description'] : __('No description', 'siteorigin-panels')
-			);
+				'description' => isset($vals['description']) ? $vals['description'] : 'No description');
 		}
 
 		if( !empty($return) ) {
@@ -65,8 +64,8 @@ function siteorigin_panels_ajax_prebuilt_layouts(){
 		}
 		else {
 			$message = '';
-			$message .= __("Your theme doesn't have any prebuilt layouts.", 'siteorigin-panels') . ' ';
-			$message .= __("You can still clone existing pages though.", 'siteorigin-panels') . ' ';
+			$message .= "Your theme doesn't have any prebuilt layouts." . ' ';
+			$message .= "You can still clone existing pages though." . ' ';
 			echo json_encode( array(
 				'error_message' => $message,
 			) );
@@ -99,7 +98,7 @@ function siteorigin_panels_ajax_prebuilt_layouts(){
 			// Create the return array
 			$return[$result->ID] = array(
 				'name' => $result->post_title,
-				'description' => __('Clone', 'siteorigin-panels')
+				'description' => 'Clone'
 			);
 		}
 

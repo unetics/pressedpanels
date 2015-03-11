@@ -47,7 +47,7 @@ function siteorigin_panels_revisions_fields( $fields ) {
 	$screen = get_current_screen();
 	if(!empty($screen) && $screen->base == 'post') return $fields;
 
-	$fields['panels_data_field'] = __('Page Builder Content', 'siteorigin-panels');
+	$fields['panels_data_field'] = 'Page Builder Content';
 	return $fields;
 
 }

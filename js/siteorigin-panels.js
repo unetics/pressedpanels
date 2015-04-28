@@ -155,6 +155,10 @@ String.prototype.panelsProcessTemplate = function(){
             }
 
             var values = this.get('values');
+            
+            
+//             console.log(this.attributes.style.background_display); fix for label
+            
             var thisModel = this;
 
             // Create a list of fields to check for a title

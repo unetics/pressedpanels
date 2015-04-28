@@ -3,7 +3,7 @@
 Plugin Name: pressedPanels
 Plugin URI: http://webcreationcentre.com.au/
 Description: A drag and drop, responsive page builder that simplifies building your website.
-Version: 2.0.3
+Version: 2.0.4
 Author: Mitchell Bray
 Author URI: http://unetics.org
 GitHub Plugin URI: https://github.com/unetics/pressedpanels
@@ -327,7 +327,6 @@ add_filter('get_post_metadata', 'siteorigin_panels_view_post_preview', 10, 3);
 
 /**
  * Process raw widgets that have come from the Page Builder front end.
- *
  * @param $widgets
  */
 function siteorigin_panels_process_raw_widgets($widgets) {
@@ -500,16 +499,17 @@ function siteorigin_panels_generate_css($post_id, $panels_data){
 		// Let other themes and plugins change the gutter.
 		$gutter = apply_filters('siteorigin_panels_css_row_gutter', $settings['margin-sides'].'px', $grid, $gi, $panels_data);
 
-/*
 		if( !empty($gutter) ) {
 			// We actually need to find half the gutter.
 			preg_match('/([0-9\.,]+)(.*)/', $gutter, $match);
 			if( !empty( $match[1] ) ) {
 				$margin_half = (floatval($match[1])/2) . $match[2];
+/*
 				$css->add_row_css($post_id, $gi, '', array(
 					'margin-left' => '-' . $margin_half,
 					'margin-right' => '-' . $margin_half,
 				) );
+*/
 				$css->add_cell_css($post_id, $gi, false, '', array(
 					'padding-left' => $margin_half,
 					'padding-right' => $margin_half,
@@ -517,7 +517,6 @@ function siteorigin_panels_generate_css($post_id, $panels_data){
 
 			}
 		}
-*/
 	}
 
 	// Let other plugins and components filter the CSS object.

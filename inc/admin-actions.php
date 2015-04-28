@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Get builder content based on the submitted panels_data.
  */

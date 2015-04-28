@@ -9,29 +9,29 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 
 		<a href="#" class="so-tool-button so-widget-add">
 			<span class="so-panels-icon so-panels-icon-plus"></span>
-			<span class="so-button-text"><?php esc_attr_e('Add Widget') ?></span>
+			<span class="so-button-text">Add Widget</span>
 		</a>
 
 		<a href="#" class="so-tool-button so-row-add">
 			<span class="so-panels-icon so-panels-icon-columns"></span>
-			<span class="so-button-text"><?php esc_attr_e('Add Row') ?></span>
+			<span class="so-button-text">Add Row</span>
 		</a>
 
 		<a href="#" class="so-tool-button so-prebuilt-add">
 			<span class="so-panels-icon so-panels-icon-cubes"></span>
-			<span class="so-button-text"><?php esc_attr_e('Prebuilt') ?></span>
+			<span class="so-button-text">Prebuilt</span>
 		</a>
 
 		<a href="#" class="so-tool-button so-history" style="display: none">
 			<span class="so-panels-icon so-panels-icon-rotate-left"></span>
-			<span class="so-button-text"><?php _e('History', 'siteorigin-panels') ?></span>
+			<span class="so-button-text">History</span>
 		</a>
 		<a href="#" class="so-tool-button so-live-editor" style="display: none">
 			<span class="so-panels-icon so-panels-icon-eye"></span>
-			<span class="so-button-text"><?php _e('Live Editor', 'siteorigin-panels') ?></span>
+			<span class="so-button-text">Live Editor</span>
 		</a>
 
-		<a href="#" class="so-switch-to-standard"><?php _e('Switch to Editor', 'siteorigin-panels') ?></a>
+		<a href="#" class="so-switch-to-standard">Switch to Editor</a>
 
 	</div>
 

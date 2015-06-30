@@ -94,7 +94,7 @@ class SiteOrigin_Panels_Default_Styling {
 			'options' => array(
 				'standard' => 'Standard',
 				'full' => 'Full Width',
-				'full-stretched' => 'Full Width Stretched',
+				'full-back' => 'Full Width Background',
 			),
 			'priority' => 10,
 		);
@@ -125,6 +125,7 @@ class SiteOrigin_Panels_Default_Styling {
 				'tile' => 'Tiled Image',
 				'cover' => 'Cover',
 				'center' => 'Centered, with original size',
+				'paralax' => 'full width scroll fixed',
 			),
 			'description' => 'How the background image is displayed.',
 			'priority' => 7,
@@ -192,6 +193,7 @@ class SiteOrigin_Panels_Default_Styling {
 				'tile' => 'Tiled Image',
 				'cover' => 'Cover',
 				'center' => 'Centered, with original size',
+				'paralax' => 'full width scroll fixed',
 			),
 			'description' => 'How the background image is displayed.',
 			'priority' => 7,
@@ -264,6 +266,8 @@ class SiteOrigin_Panels_Default_Styling {
 				case 'center':
 					$attributes['style'] .= 'background-position: center center; background-repeat: no-repeat;';
 					break;
+				case 'paralax':
+					$attributes['style'] .= 'background-position: center center; background-repeat: no-repeat; background-attachment: fixed;';
 			}
 		}
 
@@ -306,14 +310,16 @@ class SiteOrigin_Panels_Default_Styling {
 		if( !empty( $args['background'] ) ) {
 			$attributes['style'] .= 'background-color:' . $args['background']. ';';
 		}
+		
+		
 
 		if( !empty( $args['background_image_attachment'] ) ) {
 			$url = wp_get_attachment_image_src( $args['background_image_attachment'], 'full' );
-
+			
 			if( !empty($url) ) {
 				$attributes['style'] .= 'background-image: url(' . $url[0] . ');';
 			}
-
+	
 			switch( $args['background_display'] ) {
 				case 'tile':
 					$attributes['style'] .= 'background-repeat: repeat;';
@@ -323,6 +329,9 @@ class SiteOrigin_Panels_Default_Styling {
 					break;
 				case 'center':
 					$attributes['style'] .= 'background-position: center center; background-repeat: no-repeat;';
+					break;
+				case 'paralax':
+					$attributes['style'] .= 'background-position: center center; background-repeat: no-repeat; background-attachment: fixed;';
 					break;
 			}
 		}

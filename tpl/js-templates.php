@@ -41,15 +41,12 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 
 	<div class="so-panels-welcome-message">
 		<div class="so-message-wrapper">
-			<?php
-			printf(
-				__("Add a %s %s or %s to get started. Read our %s if you need help.", 'siteorigin-panels'),
-				"<a href='#' class='so-tool-button so-widget-add'><span class='so-panels-icon so-panels-icon-plus'></span> " . __('widget', 'siteorigin-panels') .  "</a>",
-				"<a href='#' class='so-tool-button so-row-add'><span class='so-panels-icon so-panels-icon-columns'></span> " . __('row', 'siteorigin-panels') .  "</a>",
-				"<a href='#' class='so-tool-button so-prebuilt-add'><span class='so-panels-icon so-panels-icon-cubes'></span> " . __('prebuilt layout', 'siteorigin-panels') .  "</a>",
-				"<a href='https://siteorigin.com/page-builder/documentation/' target='_blank'>" . __('starting guide', 'siteorigin-panels') . "</a>"
-			);
-			?>
+			Add a 
+			<a href='#' class='so-tool-button so-widget-add'><span class='so-panels-icon so-panels-icon-plus'></span>widget</a> 
+			<a href='#' class='so-tool-button so-row-add'><span class='so-panels-icon so-panels-icon-columns'></span>row</a> 
+			or 
+			<a href='#' class='so-tool-button so-prebuilt-add'><span class='so-panels-icon so-panels-icon-cubes'></span>prebuilt layout</a> 
+			to get started.
 		</div>
 	</div>
 
@@ -76,7 +73,6 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 		</div>
 
 		<div class="so-cells">
-
 		</div>
 
 	</div>
@@ -316,12 +312,13 @@ $layouts = apply_filters( 'siteorigin_panels_prebuilt_layouts', array() );
 
 			<ul class="so-sidebar-tabs">
 				<li><a href="#prebuilt">Theme Defined</a></li>
+				
 				<?php
 				$post_types = siteorigin_panels_setting('post-types');
 				foreach($post_types as $post_type) {
 					$type = get_post_type_object( $post_type );
 					if( empty($type) ) continue;
-					?><li><a href="#<?php echo 'clone_'.$post_type ?>"><?php printf( __('Clone: %s', 'siteorigin-panels'), $type->labels->name ) ?></a></li><?php
+					?><li><a href="#<?php echo 'clone_'.$post_type ?>"><?php printf( 'Clone: %s', $type->labels->name ) ?></a></li><?php
 				}
 				?>
 			</ul>

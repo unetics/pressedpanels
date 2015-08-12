@@ -3,7 +3,7 @@
 Plugin Name: pressedPanels
 Plugin URI: http://webcreationcentre.com.au/
 Description: A drag and drop, responsive page builder that simplifies building your website.
-Version: 2.0.4
+Version: 2.0.5
 Author: Mitchell Bray
 Author URI: http://unetics.org
 GitHub Plugin URI: https://github.com/unetics/pressedpanels
@@ -53,6 +53,11 @@ function siteorigin_panels_is_panel($can_edit = false){
 	$is_panel =  ( siteorigin_panels_is_home() || ( is_singular() && get_post_meta(get_the_ID(), 'panels_data', false) != '' ) );
 	return $is_panel && (!$can_edit || ( (is_singular() && current_user_can('edit_post', get_the_ID())) || ( siteorigin_panels_is_home() && current_user_can('edit_theme_options') ) ));
 }
+
+ /* @return mixed|void Are we currently viewing the home page */
+function siteorigin_panels_is_home(){
+		return apply_filters('siteorigin_panels_is_home', $home);
+	}
 
 /**
  * Render a panel metabox.

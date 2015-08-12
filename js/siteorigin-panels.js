@@ -2325,6 +2325,10 @@ String.prototype.panelsProcessTemplate = function(){
                     widget.icon = 'dashicons dashicons-admin-generic';
                 }
 
+               if(jQuery.inArray("depreciated", widget.groups) !== -1){
+	                $w.find('.widget-type-wrapper').addClass( 'depreciated' );
+               }
+
                 if( typeof widget.icon !== 'undefined' ){
                     $('<span class="widget-icon" />').addClass( widget.icon ).prependTo( $w.find('.widget-type-wrapper') );
                 }
